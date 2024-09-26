@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>About</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="gallery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+   
+   
+    <div class="main">
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+            <div class="black"></div>
+      
+          <nav>
+              <input type="checkbox" id="check">
+              <!-- <label for="check">
+                  <i class="fas fa-bars" id="btn"></i>
+                  <i class="fas fa-times" id="cancel"></i>
+              </label> -->
+              <img src="pics/logo 2.png" alt="">
+             <ul>
+                <li><a href="../index.html">home</a></li>
+                <li><a href="./admission.html">admissions</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./publication.html">publication</a></li>
+                <li><a href="./contact.html">contact</a></li>
+              </ul>
+          </nav>
+          <div class="main-heading">
+            <h1>gallery</h1>
+          </div>
+          <i class='fas fa-arrow-left'></i>
+          <div class="backhome">
+            <button><a href="../index.html"><span><i class='fas fa-arrow-left'></i></span> back to home </a></button>
+          </div>
+    </div>
+
+
+    <div class="gallery">
+        <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/imnRKJVpA7o?si=cfXSRtZrOjmTwOuw" title="aslam" frameborder="0" allow="accelerometer;" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/m3mFjMnyYWs?si=412e-tTTxIm4yX3G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        <div class="btn">
+        </div>
+    </div>
+    <div class="btn">
+        <button><a href="https://www.youtube.com/@Thasqeef_Media">For More<br>Videos</a></button>
+    </div>
+
+
+    <div class="addresspage">
+        <div class="container25">
+            <div class="address">
+                <h2><i class="fas fa-university"></i> College Address</h2>
+                <p><i class="fas fa-map-marker-alt"></i> 2W6C+2WV <br> Kundoor, Nannambra <br> Malappuram, Kerala <br> 676508</p><br>
+                <p><i class="fa fa-envelope"></i> thasqeefmedia@gmail.com</p><br>
+                <p><i class="fa fa-phone"></i> +91 9061690765</p>
+            </div>
+            <div class="contact-form">
+                <h2><i class="fas fa-envelope"></i> Send Us a Message</h2>
+                <form action="send_message.php" method="post">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment"></i> Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
