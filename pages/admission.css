@@ -272,7 +272,9 @@ nav #cancel {
 }
 .admission .text{
     width: 60%;
-    border: black solid 1px;
+    background: #fff;
+    border: transparent solid 1px;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.747);
     padding: 2rem;
     margin-right: 50px;
 }
@@ -295,7 +297,7 @@ nav #cancel {
     height: 200px;
     border: 2px solid;
     border-radius: 50%;
-    font-size:40px;
+    font-size:30px;
     background: rgb(219, 49, 19);
     color: #fff;
     box-shadow: 5px 5px 5px 5px black;
