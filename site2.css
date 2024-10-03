@@ -16,6 +16,9 @@ body{
     text-decoration: none;
     box-sizing: border-box;
 }
+p{
+    animation: fadeInUp 1s ease forwards;
+}
 
 .main {
     width: 100%;
@@ -117,7 +120,62 @@ nav #cancel {
     top: 40px;
     right: 20px;
 }
+.main .image-container50 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    position: fixed;
+    right: 6.5rem;  
+    bottom: 13rem;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
 
+.main .image-container50 a img {
+    width: 40px;
+    float: right;
+    margin:-1px;
+}
+.linkbtn {
+    margin-top: -300px;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+}
+.linkbtn button{
+    float: right;
+    justify-content: right;
+}
+.linkbtn button img{
+    width: 100px;
+    float: right;
+}
+#toggleButton{
+    float: right;
+}
+
+/* 
+.up-btn {
+    position: fixed;
+    bottom: 20px; 
+    right: 5rem;  
+    bottom: 5rem;
+    display: block;
+    z-index: 1000;
+}
+
+.up-btn button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+} */
 @media (max-width: 868px) {
     nav img {
         left: 2%;
@@ -133,6 +191,7 @@ nav #cancel {
         top: 80px;
         left: 0;
         width: 100%;
+        height: 100%;
         background-color: #2c3e50;
         z-index: 1000;
         transition: all .5s;
@@ -185,8 +244,10 @@ nav #cancel {
     width: 100%;
 }
 
+
 .big-heading {
     font-family: 'Droid Arabic Kufi',serif ;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 5em;
     color: rgb(245, 202, 11);
@@ -201,6 +262,7 @@ nav #cancel {
 .second-line {
     display: block;
     color: white;
+    margin-top: -10px;
 }
 
 @keyframes fadeInUp {
@@ -217,11 +279,17 @@ nav #cancel {
     .big-heading {
         font-size: 3em;
     }
+    .second-line{
+        line-height:20px ;
+    }
 }
 
 @media (max-width: 480px) {
     .big-heading {
-        font-size: 3em;
+        font-size: 2em;
+    }
+    .second-line{
+        margin-top: -20px;
     }
 }
 
@@ -255,15 +323,17 @@ nav #cancel {
 
 .up-btn {
     position: fixed;
-    bottom: 20px;  /* Position the button 20px from the bottom */
-    right: 5rem;   /* Position the button 20px from the right */
+    bottom: 20px; 
+    right: 5rem;  
     bottom: 5rem;
     display: block;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
 }
 
 .up-btn button {
-    background-color: #007bff;
+    background-color: rgb(255, 0, 0);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -273,20 +343,30 @@ nav #cancel {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    margin: 10px;
 }
 
+.up-btn #toggleButton{
+    background: #007bff;
+}
 .up-btn button i {
     font-size: 1.2em;
 }
-
+/* .up-btn .upb{
+    width: 50%;
+} */
 .up-btn button:hover {
     background-color: #0056b3;
 }
 
 @media (max-width: 480px) {
     .up-btn {
-        bottom: 3rem;  /* Adjust position for smaller screens */
-        right: 3rem;
+        bottom: 2rem;  /* Adjust position for smaller screens */
+        right: 2rem;
+    }
+    .main .image-container50{
+    bottom: 10rem;
+    right: 3rem; 
     }
 }
 
@@ -306,10 +386,9 @@ nav #cancel {
 .about{
     text-align: center;
     padding-top: 70px;
-    font-family:  Poppins, sans-serif !important;;
+    font-family:  "";
     color: rgb(247, 205, 19);
     font-size: 50px;
-    font-weight: 60x;
 }
 .kund{
     text-align: center;
@@ -368,16 +447,15 @@ nav #cancel {
     width: 100%;
     height: auto;
     
-    
 }
 .course .courses{
     text-align: center;
-    font-size: 50px;
     color: black;
     padding-top: 70px;
     margin-bottom: 30px;
     font-family:  Poppins, sans-serif !important;;
-
+    font-size: 60px.bijjj;
+    text-decoration-thickness: inherit;
 }
    .course .container{
     display: flex;
@@ -410,7 +488,7 @@ nav #cancel {
 
 
 .course .container .box h2 {
-    font-size: 22px;
+    font-size:medium;
     color: #007aff;
     color: rgb(241, 213, 53);
     color: rgb(248, 227, 106);
@@ -452,7 +530,6 @@ img {
     width: 100%;
     height: auto;
     max-width: 500px;
-    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -468,10 +545,12 @@ img {
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 10px;
+    box-shadow: 8px 10px 8px 10px rgba(0, 0, 0, 0.836);
+
 }
 
 .swiper {
-    width: 70%;
+    max-width: 70%;
 }
 
 .hostel .text {
@@ -600,13 +679,14 @@ img {
     max-width:15%;
     margin: 3% 0% 0% 3%;
     justify-content: center;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.767);
+
 }
 @media (max-width:480px){
     .section33 img{
         max-width: 28%;
     }
 }
-
 
 
 
@@ -649,7 +729,7 @@ img {
 .news h1{
     font-size: 60px;
     margin-bottom: 5%;
-    color: rgb(3, 175, 233);;
+    color: rgb(3, 175, 233);
     float: left;
 }
 .news h2{
@@ -660,7 +740,7 @@ img {
     color: #fff;
 }
 .news a{
-    color: rgb(150, 150, 250);
+    color: rgb(3, 175, 233);;
 }
 .news .firstline{
     width: 50%;
@@ -708,7 +788,9 @@ img {
             max-width: 180px;
             height: 350px;
             text-align: center;
-            border: black 2px ridge;
+            border: #fff 2px ridge;
+            border-radius: 10px;
+            box-shadow: 8px 10px 8px 10px rgba(0, 0, 0, 0.644);
         }
         .talk2 .untext{
             width: 50%;
